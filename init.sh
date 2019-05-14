@@ -1,0 +1,1 @@
+mongorestore -d forest_mongo -u forest -p secret --authenticationDatabase admin dump/forest_mongo_dump/

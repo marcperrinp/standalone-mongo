@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    mongodb:
+        image: mongo:4.0.6
+        container_name: forest_mongo
+        working_dir: /docker-entrypoint-initdb.d
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: forest
+            MONGO_INITDB_ROOT_PASSWORD: secret
+        ports:
+            - 27017:27017
+        volumes:
+            - .:/docker-entrypoint-initdb.d
+ 
